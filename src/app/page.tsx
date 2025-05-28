@@ -1,14 +1,27 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 p-6">
+    <div className="min-h-screen bg-white text-gray-900">
       {/* Hero */}
-      <section className="flex flex-col items-center justify-center text-center py-20">
-        <h1 className="text-4xl font-bold mb-4">Yusuke Inaba</h1>
-        <p className="text-lg max-w-xl">
-          建築 × 映像 × Web を横断し、<br />
-          すべてを“伝える力”に変えるマルチクリエイター。
-        </p>
-      </section>
+<section className="relative h-[80vh] pt-20 flex items-center justify-center text-white text-center">
+  <video
+    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+    autoPlay
+    loop
+    muted
+    playsInline
+  >
+    <source src="/hero.mp4" type="video/mp4" />
+    お使いのブラウザは動画に対応していません。
+  </video>
+  <div className="absolute inset-0 bg-black/40 z-10" />
+  <div className="relative z-20">
+    <h1 className="text-4xl font-bold">Yusuke Inaba</h1>
+    <p className="text-lg mt-4">
+      建築 × 映像 × Web を横断し、<br />
+      すべてを“伝える力”に変えるマルチクリエイター。
+    </p>
+  </div>
+</section>
 
       {/* About */}
       <section className="py-20 border-t">
